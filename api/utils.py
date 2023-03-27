@@ -43,7 +43,7 @@ def send_embed(mode: int, message: str,  channel_id: str, reply_id: str=None) ->
 		if ref:
 			payload["embeds"][0]["fields"].append({
 				"name": "質問",
-				"value": f'```{ref.json()["embeds"][0]["description"][2:1000]}```'
+				"value": f'```{ref.json()["embeds"][0]["description"][2:1000][:-2]}```'
 			})
 		payload["embeds"][0]["fields"].append(
 			{
