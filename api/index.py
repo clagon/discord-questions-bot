@@ -2,9 +2,9 @@ from flask import Flask, abort, jsonify, request
 from nacl.exceptions import BadSignatureError
 from nacl.signing import VerifyKey
 import os
-from utils import send_embed
+from .utils import send_embed
 
-from static import COMMAND_IDs
+from .static import COMMAND_IDs
 
 app = Flask(__name__)
 PUBLIC_KEY = os.getenv("DISCORD_PUBLIC_KEY")
